@@ -45,7 +45,7 @@ github "touyou/NeumorphismTab"
 
 ### CocoaPods
 
-NeumorphismTab is available through [CocoaPods](https://cocoapods.org). To instal
+NeumorphismTab is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
