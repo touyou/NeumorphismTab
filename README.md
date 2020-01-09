@@ -37,7 +37,7 @@ NeumorphismTab is custom TabBarController with Neumorphism design.
 ### Carthage
 
 If you're using [Carthage](https://github.com/Carthage/Carthage), simply add
-Sica to your `Cartfile`:
+NeumorphismTab to your `Cartfile`:
 
 ```ruby
 github "touyou/NeumorphismTab"
@@ -45,7 +45,7 @@ github "touyou/NeumorphismTab"
 
 ### CocoaPods
 
-Sica is available through [CocoaPods](https://cocoapods.org). To instal
+NeumorphismTab is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -53,7 +53,7 @@ pod 'NeumorphismTab'
 ```
 
 ### Swift Package Manager
-Sica is available through `SwiftPM`, create ` Package.swift` and add `dependencies` value
+NeumorphismTab is available through `SwiftPM`, create ` Package.swift` and add `dependencies` value
 ```Package.swift
 dependencies: [
     .package(url: "https://github.com/touyou/NeumorphismTab.git", from: "0.9.0")
