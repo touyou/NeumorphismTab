@@ -81,13 +81,9 @@
 		46043A2F23C59A0B006251D1 /* NeumorphismTab */ = {
 			isa = PBXGroup;
 			children = (
+				46043A8323C6A5F2006251D1 /* Sources */,
 				46043A3023C59A0B006251D1 /* NeumorphismTab.h */,
 				46043A3123C59A0B006251D1 /* Info.plist */,
-				46043A4723C59A2A006251D1 /* NeumorphismTabBarController.swift */,
-				46043A4923C59BBF006251D1 /* NeumorphismTabBar.swift */,
-				46043A4B23C59BFF006251D1 /* NeumorphismTabBarItem.swift */,
-				46043A4D23C5A009006251D1 /* UIView+Constraints.swift */,
-				46043A4F23C5AD6E006251D1 /* UIView+Neumorphism.swift */,
 			);
 			path = NeumorphismTab;
 			sourceTree = "<group>";
@@ -99,6 +95,18 @@
 				46043A3D23C59A0B006251D1 /* Info.plist */,
 			);
 			path = NeumorphismTabTests;
+			sourceTree = "<group>";
+		};
+		46043A8323C6A5F2006251D1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				46043A4723C59A2A006251D1 /* NeumorphismTabBarController.swift */,
+				46043A4923C59BBF006251D1 /* NeumorphismTabBar.swift */,
+				46043A4B23C59BFF006251D1 /* NeumorphismTabBarItem.swift */,
+				46043A4D23C5A009006251D1 /* UIView+Constraints.swift */,
+				46043A4F23C5AD6E006251D1 /* UIView+Neumorphism.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

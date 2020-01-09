@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class NeumorphismTabBarItem: UIButton {
+public class NeumorphismTabBarItem: UIButton {
     
     var itemHeight: CGFloat = 0
     var lock = false

@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class NeumorphismTabBar: UIView {
+public class NeumorphismTabBar: UIView {
 
     var neuItems = [NeumorphismTabBarItem]()
 }
