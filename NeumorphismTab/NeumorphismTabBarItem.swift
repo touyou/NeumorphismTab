@@ -39,10 +39,14 @@ open class NeumorphismTabBarItem: UIButton {
         label.textAlignment = .center
         return label
     }()
-    
-    convenience public init(icon: UIImage, title: String, font: UIFont = UIFont.systemFont(ofSize: 11)) {
+}
+
+// MARK: - Public
+public extension NeumorphismTabBarItem {
+
+    convenience init(icon: UIImage, title: String, font: UIFont = UIFont.systemFont(ofSize: 11)) {
         self.init()
-        
+
         translatesAutoresizingMaskIntoConstraints = false
         iconImageView.image = icon.withRenderingMode(.alwaysTemplate)
         textLabel.text = title
@@ -51,6 +55,7 @@ open class NeumorphismTabBarItem: UIButton {
     }
 }
 
+// MARK: - Private
 private extension NeumorphismTabBarItem {
     
     func setupView() {

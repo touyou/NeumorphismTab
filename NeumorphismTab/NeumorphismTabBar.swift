@@ -10,14 +10,19 @@ import UIKit
 
 open class NeumorphismTabBar: UIView {
 
-    override open var tintColor: UIColor! {
+    var neuItems = [NeumorphismTabBarItem]()
+}
+
+// MARK: - Public
+public extension NeumorphismTabBar {
+
+    override var tintColor: UIColor! {
         didSet {
             for item in neuItems {
                 item.color = tintColor
             }
         }
     }
-    var neuItems = [NeumorphismTabBarItem]()
 
     convenience init(items: [NeumorphismTabBarItem]) {
         self.init()
@@ -26,6 +31,10 @@ open class NeumorphismTabBar: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         setupView()
     }
+}
+
+// MARK: - Private
+private extension NeumorphismTabBar {
 
     func setupView() {
         if neuItems.isEmpty { return }

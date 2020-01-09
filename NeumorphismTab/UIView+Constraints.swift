@@ -10,7 +10,7 @@
 import UIKit
 
 // MARK: - Basic Method
-extension UIView {
+public extension UIView {
 
     func addConstraint(
         attribute: NSLayoutConstraint.Attribute,
@@ -54,10 +54,10 @@ extension UIView {
 }
 
 // MARK: - Layout Method
-extension UIView {
+public extension UIView {
 
     @discardableResult
-    public func left(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func left(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = leftAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
@@ -65,7 +65,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func left(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func left(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = leftAnchor.constraint(equalTo: view.leftAnchor, constant: space)
         constraint.isActive = true
@@ -73,7 +73,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func right(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func right(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = rightAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
@@ -81,7 +81,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func right(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func right(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = rightAnchor.constraint(equalTo: view.rightAnchor, constant: space)
         constraint.isActive = true
@@ -89,7 +89,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func top(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func top(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = topAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
@@ -97,7 +97,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func top(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func top(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = topAnchor.constraint(equalTo: view.topAnchor, constant: space)
         constraint.isActive = true
@@ -105,7 +105,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func bottom(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func bottom(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = bottomAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
@@ -113,7 +113,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func bottom(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func bottom(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: space)
         constraint.isActive = true
@@ -121,7 +121,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func topLeft(toView view: UIView, top: CGFloat = 0, left: CGFloat = 0) -> [NSLayoutConstraint] {
+    func topLeft(toView view: UIView, top: CGFloat = 0, left: CGFloat = 0) -> [NSLayoutConstraint] {
 
         let topConstraint = self.top(toView: view, space: top)
         let leftConstraint = self.left(toView: view, space: left)
@@ -129,7 +129,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func topRight(toView view: UIView, top: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
+    func topRight(toView view: UIView, top: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
 
         let topConstraint = self.top(toView: view, space: top)
         let rightConstraint = self.right(toView: view, space: right)
@@ -137,7 +137,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func bottomLeft(toView view: UIView, bottom: CGFloat = 0, left: CGFloat = 0) -> [NSLayoutConstraint] {
+    func bottomLeft(toView view: UIView, bottom: CGFloat = 0, left: CGFloat = 0) -> [NSLayoutConstraint] {
 
         let bottomConstraint = self.bottom(toView: view, space: bottom)
         let leftConstraint = self.left(toView: view, space: left)
@@ -145,7 +145,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func bottomRight(toView view: UIView, bottom: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
+    func bottomRight(toView view: UIView, bottom: CGFloat = 0, right: CGFloat = 0) -> [NSLayoutConstraint] {
 
         let bottomConstraint = self.bottom(toView: view, space: bottom)
         let rightConstraint = self.right(toView: view, space: right)
@@ -153,7 +153,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func verticalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func verticalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = topAnchor.constraint(equalTo: view.bottomAnchor, constant: space)
         constraint.isActive = true
@@ -161,7 +161,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func horizontalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func horizontalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = rightAnchor.constraint(equalTo: view.leftAnchor, constant: -space)
         constraint.isActive = true
@@ -169,7 +169,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func leftHorizontalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func leftHorizontalSpacing(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = leftAnchor.constraint(equalTo: view.rightAnchor, constant: -space)
         constraint.isActive = true
@@ -178,10 +178,10 @@ extension UIView {
 }
 
 // MARK: - Size Method
-extension UIView {
+public extension UIView {
 
     @discardableResult
-    public func width(_ width: CGFloat) -> NSLayoutConstraint {
+    func width(_ width: CGFloat) -> NSLayoutConstraint {
 
         let constraint = widthAnchor.constraint(equalToConstant: width)
         constraint.isActive = true
@@ -189,7 +189,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func width(toDimension dimension: NSLayoutDimension, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
+    func width(toDimension dimension: NSLayoutDimension, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = widthAnchor.constraint(equalTo: dimension, multiplier: multiplier, constant: greater)
         constraint.isActive = true
@@ -197,7 +197,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func width(toView view: UIView, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
+    func width(toView view: UIView, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier, constant: greater)
         constraint.isActive = true
@@ -205,7 +205,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func height(_ height: CGFloat) -> NSLayoutConstraint {
+    func height(_ height: CGFloat) -> NSLayoutConstraint {
 
         let constraint = heightAnchor.constraint(equalToConstant: height)
         constraint.isActive = true
@@ -213,7 +213,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func height(toDimension dimension: NSLayoutDimension, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
+    func height(toDimension dimension: NSLayoutDimension, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = heightAnchor.constraint(equalTo: dimension, multiplier: multiplier, constant: greater)
         constraint.isActive = true
@@ -221,41 +221,41 @@ extension UIView {
     }
 
     @discardableResult
-    public func height(toView view: UIView, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
+    func height(toView view: UIView, multiplier: CGFloat = 1, greater: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: multiplier, constant: greater)
         constraint.isActive = true
         return constraint
     }
 
-    public func size(_ size: CGSize) {
+    func size(_ size: CGSize) {
 
         width(size.width)
         height(size.height)
     }
 
-    public func size(toView view: UIView, greater: CGFloat = 0) {
+    func size(toView view: UIView, greater: CGFloat = 0) {
 
         width(toView: view, greater: greater)
         height(toView: view, greater: greater)
     }
 
-    public func square(edge: CGFloat) {
+    func square(edge: CGFloat) {
 
         size(CGSize(width: edge, height: edge))
     }
 
-    public func square() {
+    func square() {
 
         width(toDimension: heightAnchor, multiplier: 1, greater: 0)
     }
 }
 
 // MARK: Align Method
-extension UIView {
+public extension UIView {
 
     @discardableResult
-    public func centerX(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func centerX(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: space)
         constraint.isActive = true
@@ -263,7 +263,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func centerX(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func centerX(toAnchor anchor: NSLayoutXAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = centerXAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
@@ -271,7 +271,7 @@ extension UIView {
     }
 
     @discardableResult
-    public func centerY(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
+    func centerY(toView view: UIView, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: space)
         constraint.isActive = true
@@ -279,14 +279,14 @@ extension UIView {
     }
 
     @discardableResult
-    public func centerY(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
+    func centerY(toAnchor anchor: NSLayoutYAxisAnchor, space: CGFloat = 0) -> NSLayoutConstraint {
 
         let constraint = centerYAnchor.constraint(equalTo: anchor, constant: space)
         constraint.isActive = true
         return constraint
     }
 
-    public func center(toView view: UIView, space: CGFloat = 0) {
+    func center(toView view: UIView, space: CGFloat = 0) {
 
         centerX(toView: view, space: space)
         centerY(toView: view, space: space)
@@ -294,33 +294,33 @@ extension UIView {
 }
 
 // MARK: Fill Method
-extension UIView {
+public extension UIView {
 
-    public func horizontal(toView view: UIView, space: CGFloat = 0) {
+    func horizontal(toView view: UIView, space: CGFloat = 0) {
 
         left(toAnchor: view.leftAnchor, space: space)
         right(toAnchor: view.rightAnchor, space: -space)
     }
 
-    public func horizontal(toView view: UIView, leftPadding: CGFloat, rightPadding: CGFloat) {
+    func horizontal(toView view: UIView, leftPadding: CGFloat, rightPadding: CGFloat) {
 
         left(toAnchor: view.leftAnchor, space: leftPadding)
         right(toAnchor: view.rightAnchor, space: rightPadding)
     }
 
-    public func vertical(toView view: UIView, space: CGFloat = 0) {
+    func vertical(toView view: UIView, space: CGFloat = 0) {
 
         top(toAnchor: view.topAnchor, space: space)
         bottom(toAnchor: view.bottomAnchor, space: -space)
     }
 
-    public func vertical(toView view: UIView, topPadding: CGFloat, bottomPadding: CGFloat) {
+    func vertical(toView view: UIView, topPadding: CGFloat, bottomPadding: CGFloat) {
 
         top(toAnchor: view.topAnchor, space: topPadding)
         bottom(toAnchor: view.bottomAnchor, space: bottomPadding)
     }
 
-    public func fill(toView view: UIView, space: UIEdgeInsets = .zero) {
+    func fill(toView view: UIView, space: UIEdgeInsets = .zero) {
 
         left(toView: view, space: space.left)
         right(toView: view, space: -space.right)

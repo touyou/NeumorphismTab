@@ -9,6 +9,7 @@
 import UIKit
 
 open class NeumorphismTabBarController: UITabBarController {
+
     var neuTabBar: NeumorphismTabBar!
     var selectedColor = UIColor.darkGray
     var normalColor = UIColor.lightGray {
@@ -19,15 +20,30 @@ open class NeumorphismTabBarController: UITabBarController {
 
     private var neuTabBarHeight: CGFloat = 60
 
-    override open func viewDidLoad() {
+    // MARK: - Open
+    /// Override it and initialize tab items and ViewControllers here.
+    open func setupView() {}
+
+    /// Call this function after switched tab
+    open func switchedTab(to toIndex: Int) {}
+}
+
+// MARK: - Public
+public extension NeumorphismTabBarController {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
+
         tabBar.isHidden = true
         setupView()
     }
 
-    open func setupView() {}
-
-    open func setTabBar(items: [NeumorphismTabBarItem], height: CGFloat = 60) {
+    /// Set up tab bar.
+    func setTabBar(
+        items: [NeumorphismTabBarItem],
+        height: CGFloat = 60,
+        shadowOffset: CGFloat = 9,
+        shadowBlur: CGFloat = 16) {
         guard items.count > 0 else { return }
 
         neuTabBar = NeumorphismTabBar(items: items)
@@ -48,15 +64,22 @@ open class NeumorphismTabBarController: UITabBarController {
         view.layoutIfNeeded()
         bar.backgroundColor = view.backgroundColor
         bar.layer.cornerRadius = neuTabBarHeight / 2
-        bar.addNeumorphismShadow(with: view)
+        bar.addNeumorphismShadow(with: view, dist: shadowOffset, blur: shadowBlur)
     }
+}
+
+// MARK: - Private
+private extension NeumorphismTabBarController {
 
     @objc func switchTab(button: UIButton) {
+
         let newIndex = button.tag
         changeTab(from: selectedIndex, to: newIndex)
+        switchedTab(to: newIndex)
     }
 
-    private func changeTab(from fromIndex: Int, to toIndex: Int) {
+    func changeTab(from fromIndex: Int, to toIndex: Int) {
+
         neuTabBar.neuItems[fromIndex].color = normalColor
         neuTabBar.neuItems[toIndex].color = selectedColor
 
