@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "NeumorphismTab"
-  spec.version      = "v0.9.0"
+  spec.version      = "0.9.0"
   spec.summary      = "Custom TabBarController with Neumorphism."
   spec.homepage     = "https://github.com/touyou/NeumorphismTab"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
