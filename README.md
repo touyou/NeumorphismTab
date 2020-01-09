@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./resources/neumorphismtab.png" alt="NeumorphismTab" width="70%" />
+    <img src="https://github.com/touyou/NeumorphismTab/blob/master/resources/neumorphismtab.png" alt="NeumorphismTab" width="70%" />
 </p>
 
 <p align="center">
@@ -70,7 +70,7 @@ or you can use GUI based SPM with Xcode 11.
 Like this.
 
 <p align="center">
-    <img src="./resources/demo.png" alt="NeumorphismTab" width="70%" />
+    <img src="https://github.com/touyou/NeumorphismTab/blob/master/resources/demo.png" alt="NeumorphismTab" width="70%" />
 </p>
 
 Code is this.
