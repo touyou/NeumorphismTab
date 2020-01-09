@@ -29,7 +29,7 @@ NeumorphismTab is custom TabBarController with Neumorphism design.
 - UIView extension which add neumorphism shadow to any views.
 
 ## Requirements
-- Xcode 9.3 or greater
+- Xcode 11.0 or greater
 - iOS 11 or greater
 - Swift 5.1
 
