@@ -16,6 +16,7 @@
 		46043A7E23C5BB63006251D1 /* NeumorphismTab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46043A7D23C5BB63006251D1 /* NeumorphismTab.framework */; };
 		46043A7F23C5BB63006251D1 /* NeumorphismTab.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46043A7D23C5BB63006251D1 /* NeumorphismTab.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46043A8223C60BC1006251D1 /* DemoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46043A8123C60BC1006251D1 /* DemoTabBarController.swift */; };
+		46043A8923C6E347006251D1 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46043A8823C6E347006251D1 /* ViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		46043A6D23C5BA28006251D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46043A7D23C5BB63006251D1 /* NeumorphismTab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NeumorphismTab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46043A8123C60BC1006251D1 /* DemoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabBarController.swift; sourceTree = "<group>"; };
+		46043A8823C6E347006251D1 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +79,10 @@
 		46043A5E23C5BA25006251D1 /* NeumorphismTabDemo */ = {
 			isa = PBXGroup;
 			children = (
-				46043A5F23C5BA25006251D1 /* AppDelegate.swift */,
-				46043A6123C5BA25006251D1 /* SceneDelegate.swift */,
-				46043A6323C5BA25006251D1 /* ViewController.swift */,
-				46043A6523C5BA25006251D1 /* Main.storyboard */,
+				46043A8623C6E248006251D1 /* Sources */,
 				46043A6823C5BA28006251D1 /* Assets.xcassets */,
 				46043A6A23C5BA28006251D1 /* LaunchScreen.storyboard */,
 				46043A6D23C5BA28006251D1 /* Info.plist */,
-				46043A8123C60BC1006251D1 /* DemoTabBarController.swift */,
 			);
 			path = NeumorphismTabDemo;
 			sourceTree = "<group>";
@@ -95,6 +93,27 @@
 				46043A7D23C5BB63006251D1 /* NeumorphismTab.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46043A8623C6E248006251D1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				46043A8723C6E25D006251D1 /* Views */,
+				46043A5F23C5BA25006251D1 /* AppDelegate.swift */,
+				46043A6123C5BA25006251D1 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		46043A8723C6E25D006251D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46043A8123C60BC1006251D1 /* DemoTabBarController.swift */,
+				46043A6523C5BA25006251D1 /* Main.storyboard */,
+				46043A6323C5BA25006251D1 /* ViewController.swift */,
+				46043A8823C6E347006251D1 /* ViewController.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +178,7 @@
 				46043A6C23C5BA28006251D1 /* LaunchScreen.storyboard in Resources */,
 				46043A6923C5BA28006251D1 /* Assets.xcassets in Resources */,
 				46043A6723C5BA25006251D1 /* Main.storyboard in Resources */,
+				46043A8923C6E347006251D1 /* ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

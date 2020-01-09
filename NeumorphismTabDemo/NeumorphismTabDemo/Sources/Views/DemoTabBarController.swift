@@ -2,7 +2,7 @@
 //  DemoTabBarController.swift
 //  NeumorphismTabDemo
 //
-//  Created by 藤井陽介 on 2020/01/08.
+//  Created by touyou on 2020/01/08.
 //  Copyright © 2020 touyou. All rights reserved.
 //
 
@@ -19,14 +19,9 @@ class DemoTabBarController: NeumorphismTabBarController {
 
         view.backgroundColor = color
 
-        let homeViewController: UIViewController = {
-            let viewController = UIViewController()
+        let homeViewController: ViewController = {
+            let viewController = ViewController.instantiate()
             viewController.view.backgroundColor = color
-            let label = UILabel()
-            label.text = "First"
-            label.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-            label.center = viewController.view.center
-            viewController.view.addSubview(label)
             return viewController
         }()
 

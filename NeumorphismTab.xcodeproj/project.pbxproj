@@ -15,6 +15,7 @@
 		46043A4C23C59BFF006251D1 /* NeumorphismTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46043A4B23C59BFF006251D1 /* NeumorphismTabBarItem.swift */; };
 		46043A4E23C5A009006251D1 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46043A4D23C5A009006251D1 /* UIView+Constraints.swift */; };
 		46043A5023C5AD6E006251D1 /* UIView+Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46043A4F23C5AD6E006251D1 /* UIView+Neumorphism.swift */; };
+		46043A8523C6DC24006251D1 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46043A8423C6DC24006251D1 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		46043A4B23C59BFF006251D1 /* NeumorphismTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismTabBarItem.swift; sourceTree = "<group>"; };
 		46043A4D23C5A009006251D1 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		46043A4F23C5AD6E006251D1 /* UIView+Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Neumorphism.swift"; sourceTree = "<group>"; };
+		46043A8423C6DC24006251D1 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				46043A4B23C59BFF006251D1 /* NeumorphismTabBarItem.swift */,
 				46043A4D23C5A009006251D1 /* UIView+Constraints.swift */,
 				46043A4F23C5AD6E006251D1 /* UIView+Neumorphism.swift */,
+				46043A8423C6DC24006251D1 /* StoryboardInstantiable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				46043A4A23C59BBF006251D1 /* NeumorphismTabBar.swift in Sources */,
 				46043A4E23C5A009006251D1 /* UIView+Constraints.swift in Sources */,
 				46043A5023C5AD6E006251D1 /* UIView+Neumorphism.swift in Sources */,
+				46043A8523C6DC24006251D1 /* StoryboardInstantiable.swift in Sources */,
 				46043A4C23C59BFF006251D1 /* NeumorphismTabBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  NeumorphismTabBarItem.swift
 //  NeumorphismTab
 //
-//  Created by 藤井陽介 on 2020/01/08.
+//  Created by touyou on 2020/01/08.
 //  Copyright © 2020 touyou. All rights reserved.
 //
 

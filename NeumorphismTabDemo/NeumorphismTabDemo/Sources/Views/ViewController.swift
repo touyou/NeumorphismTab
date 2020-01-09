@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  NeumorphismTabDemo
 //
-//  Created by 藤井陽介 on 2020/01/08.
+//  Created by touyou on 2020/01/08.
 //  Copyright © 2020 touyou. All rights reserved.
 //
 
@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         let color = UIColor(hex: "C1D2EB")
-        view.backgroundColor = color
         miniView.backgroundColor = color
         miniView.layer.cornerRadius = miniView.bounds.width / 2
         miniView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
@@ -28,3 +27,4 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: StoryboardInstantiable {}
