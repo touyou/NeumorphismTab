@@ -15,10 +15,10 @@
     <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
   </a>
   <a href="https://cocoapods.org/pods/NeumorphismTab">
-    <img src="https://img.shields.io/cocoapods/v/Neumorphism.svg?style=flat" alt="Version" />
+    <img src="https://img.shields.io/cocoapods/v/NeumorphismTab" alt="Version" />
   </a>
   <a href="https://cocoapods.org/pods/NeumorphismTab">
-    <img src="https://img.shields.io/cocoapods/l/Neumorphism.svg?style=flat" alt="License" />
+    <img src="https://img.shields.io/cocoapods/l/NeumorphismTab" alt="License" />
   </a>
 </p>
 
