@@ -77,7 +77,7 @@ public extension NeumorphismTabBarController {
         shadowBlur: CGFloat = 16) {
         guard items.count > 0 else { return }
 
-        neuTabBar = NeumorphismTabBar(items: items)
+        neuTabBar = NeumorphismTabBar(items: items, horizontalMargin: tabHorizontalMargin)
         guard let bar = neuTabBar else { return }
         self.shadowOffset = shadowOffset
         self.shadowBlur = shadowBlur
