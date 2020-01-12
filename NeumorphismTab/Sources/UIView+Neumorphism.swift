@@ -11,13 +11,15 @@ import UIKit
 // MARK: - Shadow Method
 public extension UIView {
 
-    func addNeumorphismShadow(with parent: UIView, dist: CGFloat = 9, blur: CGFloat = 16) {
+    @discardableResult
+    func addNeumorphismShadow(with parent: UIView, dist: CGFloat = 9, blur: CGFloat = 16) -> [UIView] {
 
-        guard let backgroundColor = backgroundColor else { return }
+        guard let backgroundColor = backgroundColor else { return [] }
         let shadowViews = neumorphismShadowViews(color: backgroundColor, dist: dist, blur: blur)
         shadowViews.forEach {
             parent.insertSubview($0, belowSubview: self)
         }
+        return shadowViews
     }
 
     func neumorphismShadowViews(color: UIColor, dist: CGFloat, blur: CGFloat) -> [UIView] {

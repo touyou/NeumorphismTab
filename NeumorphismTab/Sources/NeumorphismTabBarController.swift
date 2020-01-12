@@ -18,9 +18,40 @@ open class NeumorphismTabBarController: UITabBarController {
         }
     }
 
+    public var backgroundColor: UIColor? = nil {
+        didSet {
+            guard let bgColor = backgroundColor else { return }
+            guard let bar = neuTabBar else { return }
+
+            tabShadows.forEach {
+                $0.removeFromSuperview()
+            }
+            view.backgroundColor = bgColor
+            bar.backgroundColor = bgColor
+            tabShadows = bar.addNeumorphismShadow(with: view, dist: shadowOffset, blur: shadowBlur)
+        }
+    }
+
     private var neuTabBarHeight: CGFloat = 60
+    private var tabShadows: [UIView] = []
+    private var shadowOffset: CGFloat = 9
+    private var shadowBlur: CGFloat = 16
 
     // MARK: - Open
+    /// Override it if you want to adjust tab margin of both sides
+    open var tabHorizontalMargin: CGFloat {
+        get {
+            return 48
+        }
+    }
+
+    /// Override it if you want to adjust tab margin of bottom
+    open var tabVerticalMargin: CGFloat {
+        get {
+            return 60
+        }
+    }
+
     /// Override it and initialize tab items and ViewControllers here.
     open func setupView() {}
 
@@ -48,12 +79,14 @@ public extension NeumorphismTabBarController {
 
         neuTabBar = NeumorphismTabBar(items: items)
         guard let bar = neuTabBar else { return }
+        self.shadowOffset = shadowOffset
+        self.shadowBlur = shadowBlur
         neuTabBar.tintColor = normalColor
         bar.neuItems.first?.color = selectedColor
 
         view.addSubview(bar)
-        bar.horizontal(toView: view, space: 48)
-        bar.bottom(toView: view, space: -60)
+        bar.horizontal(toView: view, space: tabHorizontalMargin)
+        bar.bottom(toView: view, space: -tabVerticalMargin)
         neuTabBarHeight = height
         bar.height(neuTabBarHeight)
         for i in 0 ..< items.count {
@@ -64,7 +97,7 @@ public extension NeumorphismTabBarController {
         view.layoutIfNeeded()
         bar.backgroundColor = view.backgroundColor
         bar.layer.cornerRadius = neuTabBarHeight / 2
-        bar.addNeumorphismShadow(with: view, dist: shadowOffset, blur: shadowBlur)
+        tabShadows = bar.addNeumorphismShadow(with: view, dist: shadowOffset, blur: shadowBlur)
     }
 }
 
