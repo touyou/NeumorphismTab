@@ -56,7 +56,7 @@ pod 'NeumorphismTab'
 NeumorphismTab is available through `SwiftPM`, create ` Package.swift` and add `dependencies` value
 ```Package.swift
 dependencies: [
-    .package(url: "https://github.com/touyou/NeumorphismTab.git", from: "0.9.1")
+    .package(url: "https://github.com/touyou/NeumorphismTab.git", from: "0.9.5")
 ]
 ```
 See also: [GitHub - j-channings/swift-package-manager-ios: Example of how to use SPM v4 to manage iOS dependencies](https://github.com/j-channings/swift-package-manager-ios)
