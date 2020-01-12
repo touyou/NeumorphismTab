@@ -123,5 +123,50 @@ childView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .la
 childView.addNeumorphismShadow(with: view)
 ```
 
+### Overridable method and properties
+
+#### `var tabHorizontalMargin: CGFloat`
+
+Override it if you want to adjust tab margin of horizontal.
+
+#### `var tabVerticalMargin: CGFloat`
+
+Override it if you want to adjust tab margin of bottom.
+
+#### `func setupView()`
+
+You must override it and setup ViewControllers and tab by calling setTabBar method here.
+
+#### `func switchedTab(to toIndex: Int)`
+
+Override it if you want to implement some feature when switching tab.
+
+### Other convenience properties, method and extensions
+
+#### `backgroundColor` (in `NeumorphismTabBarController`)
+
+If you set some color here, it can reset neumorphism shadow color with set color.
+
+#### `StoryboardInstantiable` protocol and `instantiate()` method
+
+When you use NeumorphismTabBarController, you should instantiate ViewControllers by code because you can setup it only in `setupView` method.
+`StoryboardInstantiate` protocol enable you to use Storyboard and instantiate by code easily.
+
+You should write like this:
+
+```swift
+extension ViewController: StoryboardInstantiable {}
+```
+
+Now you can instantiate ViewController like this:
+
+```swift
+let viewController = ViewController.instantiate()
+```
+
+#### Hex color initializer
+
+You can use UIColor initializer by hex string. You must **not** include `#` if you use it.
+
 ## License
 NeumorphismTab is available under the MIT license. See the [LICENSE file](https://github.com/touyou/NeumorphismTab/blob/master/LICENSE) for more info.

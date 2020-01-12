@@ -38,7 +38,7 @@ open class NeumorphismTabBarController: UITabBarController {
     private var shadowBlur: CGFloat = 16
 
     // MARK: - Open
-    /// Override it if you want to adjust tab margin of both sides
+    /// Override it if you want to adjust tab margin of left or right
     open var tabHorizontalMargin: CGFloat {
         get {
             return 48
