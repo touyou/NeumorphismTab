@@ -109,19 +109,19 @@ public extension UIColor {
     private func hsbToHsl(h: CGFloat, s: CGFloat, b: CGFloat) -> (h: CGFloat, s: CGFloat, l: CGFloat) {
 
         let newH = h
-        var newL = (2 - s) * b
+        var newL = (2.0 - s) * b
         var newS = s * b
-        newS /= newL <= 1 ? newL : 2 - newL
-        newL /= 2
+        newS /= (newL <= 1.0 ? newL : 2.0 - newL)
+        newL /= 2.0
         return (h: newH, s: newS, l: newL)
     }
 
     private func hslToHsb(h: CGFloat, s: CGFloat, l: CGFloat) -> (h: CGFloat, s: CGFloat, b: CGFloat) {
         let newH = h
-        var b = l * 2
-        var newS = s * (b <= 1 ? b : 2 - b)
-        b = (b + newS) / 2
-        newS = (2 * newS) / (b + newS)
-        return (h: newH, s: newS, b: b)
+        let ll = l * 2.0
+        let ss = s * (ll <= 1.0 ? ll : 2.0 - ll)
+        let newB = (ll + ss) / 2.0
+        let newS = (2.0 * ss) / (ll + ss)
+        return (h: newH, s: newS, b: newB)
     }
 }
