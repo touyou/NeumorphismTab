@@ -24,23 +24,23 @@ public extension NeumorphismTabBar {
         }
     }
 
-    convenience init(items: [NeumorphismTabBarItem]) {
+    convenience init(items: [NeumorphismTabBarItem], horizontalMargin: CGFloat) {
         self.init()
 
         neuItems = items
         translatesAutoresizingMaskIntoConstraints = false
-        setupView()
+        setupView(with: horizontalMargin)
     }
 }
 
 // MARK: - Private
 private extension NeumorphismTabBar {
 
-    func setupView() {
+    func setupView(with margin: CGFloat) {
         if neuItems.isEmpty { return }
 
         var horizontalConstraints = "H:|"
-        let itemWidth = (UIScreen.main.bounds.width - 48 * 2) / CGFloat(neuItems.count)
+        let itemWidth = (UIScreen.main.bounds.width - margin * 2) / CGFloat(neuItems.count)
         for i in 0 ..< neuItems.count {
             let item = neuItems[i]
             addSubview(item)
