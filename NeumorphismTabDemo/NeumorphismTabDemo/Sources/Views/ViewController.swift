@@ -12,6 +12,8 @@ import NeumorphismTab
 class ViewController: UIViewController {
     @IBOutlet weak var miniView: UIView!
 
+    private var shadowViews: [UIView] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,11 +21,14 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let color = UIColor(hex: "C1D2EB")
-        miniView.backgroundColor = color
-        miniView.layer.cornerRadius = miniView.bounds.width / 2
-        miniView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        miniView.addNeumorphismShadow(with: view)
+        // TODO: simpler solution
+        if shadowViews.isEmpty {
+            let color = UIColor(hex: "C1D2EB")
+            miniView.backgroundColor = color
+            miniView.layer.cornerRadius = miniView.bounds.width / 2
+            miniView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
+            shadowViews = miniView.addNeumorphismShadow(with: view)
+        }
     }
 }
 
