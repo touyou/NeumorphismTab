@@ -158,7 +158,7 @@ You should write like this:
 extension ViewController: StoryboardInstantiable {}
 ```
 
-Then you should create new storyboard named ViewController's name (e.g. `ViewController.swift`), and make layout and set `is initial view controller` true.
+Then you should create new storyboard named ViewController's name (e.g. `ViewController.storyboard`), and make layout and set `is initial view controller` true.
 Now you can instantiate ViewController like this:
 
 ```swift
